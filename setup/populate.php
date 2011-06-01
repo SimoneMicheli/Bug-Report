@@ -1,5 +1,5 @@
 <?php
-include_once("../libs/database.php");
+include_once("../libs/database.lib.php");
 $db = new pgDb();
 $db->connect();
 $db->transaction("

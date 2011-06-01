@@ -8,10 +8,16 @@
         'bold' => true,
       ),
     ),
+    'header' => 
+    array (
+      'vars' => 
+      array (
+        'title' => 'Welcome to BUGBOX',
+      ),
+    ),
   ),
   'vars' => 
   array (
-    'title' => 'Welcome to BUGBOX',
     'cutoff_size' => 40,
   ),
 ); ?>

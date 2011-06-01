@@ -40,11 +40,13 @@
 		position: absolute;
 		right: 0;
 		top:20px;
+		color: #FFFFFF;
+        font-size: 12px;
 	}
 	/* main area layout */
 	#main{padding:24px 0 20px 0;}
 	#leftcolumn{float: left;width:193px;}
-	#center{float: left;width:504px;padding: 0 20px;}
+	#center{float: left;width:791px;padding: 0 20px;}
 	#rightcolumn{float: left;width:287px;}
 	/* bottom layout */
 	#bottominfo{
@@ -168,16 +170,16 @@
         margin-bottom: 15px;
 	}
 	.button{
-		display: block;
 		width: auto;
 		line-height:1em;
 		text-align: center;
 		background: #659AA6;
-		border: 4px solid #fff;
+		border: 0;
 		color: #fff;
 		cursor: pointer;
 		margin:0;
 		padding:3px 8px; /* IE6 */
+		font-size: 14px;
 	}
 	
 /* =FOOTER */
@@ -209,3 +211,30 @@
     form label{
         font-size: 13px;
     }
+/*-------------custom-------------------------*/
+.error{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fff;
+    color: #444;
+    display: block;
+    position: relative;
+    padding: 8px;
+    border: 4px solid #E82A2A;
+}
+/*-------------facebox style-----------------*/
+#facebox h1{
+    color: #5699A7;
+    font-size: 2em;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: auto;
+}
+
+#facebox .enewsbox{
+        margin-bottom:5px ;
+	}

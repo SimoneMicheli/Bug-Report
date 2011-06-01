@@ -1,4 +1,5 @@
 <!-- Start Bottom Information -->
+</div>
 <div id="bottominfo">
   <div class="container">
     <!-- bottom left information -->

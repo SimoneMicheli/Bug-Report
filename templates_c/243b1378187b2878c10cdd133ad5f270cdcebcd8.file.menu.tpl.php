@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:38:57
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-01 08:40:46
          compiled from "./templates/menu.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13691148724de2aee18d6b81-75751535%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7617530134de5deeec15411-43590099%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '243b1378187b2878c10cdd133ad5f270cdcebcd8' => 
     array (
       0 => './templates/menu.tpl',
-      1 => 1306701535,
+      1 => 1306869560,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13691148724de2aee18d6b81-75751535',
+  'nocache_hash' => '7617530134de5deeec15411-43590099',
   'function' => 
   array (
   ),
@@ -25,7 +25,7 @@ $_smarty_tpl->decodeProperties(array (
       <li><a href="http://www.free-css.com/" >New Ticket</a></li>
       <li><a href="http://www.free-css.com/" >View your Ticket</a></li>
       <li><a href="http://www.free-css.com/" >View your Project</a></li>
-      <li><a href="http://www.free-css.com/" >Logout</a></li>
+      <li><a href="./execute_logout.php" >Logout</a></li>
     </ul>
     <h3 class="leftbox header_small">Last Update</h3>
     <div class="leftbox features">

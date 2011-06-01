@@ -1,186 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>BugBox</title>
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-
+<script src="./js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="./stylesheets/validationEngine.jquery.css" type="text/css"/>
 <script language="JavaScript" type="text/javascript">
-			function isAnEmail(string) {
-                if (string.search(/^\w+((-\w+)|(\.\w+))*\@\w+((\.|-)\w+)*\.\w+$/) != -1)
-                    return 1;
-                else
-                    return 0;
-            }
-            function controlla(form){
-				if (form.email.value == "" || form.password1.value == "" || form.password2.value == "" || form.name.value == "" || form.surname.value == ""){
-                    alert("Please complete all required fields");
-                    return (false);
-                }
-				if ( isAnEmail(form.email.value) == 0 ) {
-                    alert("Email is invalid!")
-                    return (false);
-                }
-                if (form.email.value.length > 254){
-                    alert("Email too long");
-                    return (false);
-                }
-				if (form.password1.value.length < 6){
-                    alert("Password too short");
-                    return (false);
-                }
-                if (form.name.value.length > 254){
-                    alert("Name too long");
-                    return (false);
-                }
-				if (form.surname.value.length > 254){
-                    alert("Surname too long");
-                    return (false);
-                }
-				if (form.address.value.length > 254){
-                    alert("Address too long");
-                    return (false);
-                }
-				if (form.city.value.length > 254){
-                    alert("City too long");
-                    return (false);
-                }
-				if (form.phone.value.length > 19){
-                    alert("Phone too long");
-                    return (false);
-                }
-				if (form.password1.value != form.password2.value){
-                    alert("Passwords are different");
-                    return (false);
-                }
-				var checkOK = "0123456789";
-                var checkStr = form.phone.value;
-                var allValid = true;
-                for (i = 0;  i < checkStr.length;  i++){
-                    ch = checkStr.charAt(i);
-                    for (j = 0;  j < checkOK.length;  j++)
-                        if (ch == checkOK.charAt(j))
-                            break;
-                    if (j == checkOK.length){
-                        allValid = false;
-                        break;
-                    }
-                }
-                if (!allValid){
-                    alert("Phone contains illegal characters!");
-                    return (false);
-                }
-				return (true);
-            }
+$(document).ready(function(){
+    //$("#join").validationEngine('attach');
+    $("#join").validationEngine({promptPosition : "topRight", scroll: true}); 
+    $(document).bind('close.facebox', function() { $("#join").validationEngine("hideAll"); });
+});
 </script>
-
-
-</head>
-
-<body>
-<div id="main_container">
-	<div id="header">
-    	<div id="logo">
-				<a href="home.html"><span>BugBox</span></a> 
-				<span>For professional debugging</span>
-			</div>
-    </div>
-    
-    <div class="green_box">
-		  <div class="clock">
-        <img src="images/clock.png" alt="" title="" />             
-      </div>
-			<style>
-				.green_box form{
-					padding: 15px;
-					position: relative;
-					margin: auto;
-					color: #fff;
-				}
-				
-				form input{
-					display: block;
-					padding: 5px;
-					margin-bottom: 10px;
-					border: 1px solid #416271;
-					background: transparent;
-					-moz-border-radius: 5px;
-					color: #fff;
-				}
-				
-				form input:focus{
-					-moz-box-shadow: 0px 0px 8px #555;
-				}
-				
-				form input[type=submit]{
-					display: block;
-					padding: 5px;
-					padding-left: 15px;
-					padding-right: 15px;
-					margin: auto;
-					margin-top: 10px;
-					border: 1px solid #416271;
-					background: transparent;
-					-moz-border-radius: 5px;
-					color: #fff;
-					cursor: pointer;
-				}
-				
-				form label{
-					display: block;
-					width: 80px;
-					text-align: left;
-					color: #fff;
-				}
-				
-				.green{
-					font-size: 15px;
-					line-height: 20px;
-					color: #fff;
-				}
-			</style>
-      <div class="text_content">
         <h1>Registration</h1>
-				<form action="#" method="post" onSubmit="return controlla(this)">
+				<form action="execute_register.php" method="post" id="join" >
 						<!--inizio parte prima-->
-							<label>Email</label> <input type="text" name="email" />
-							<label>Password</label> <input type="password"  name="password1" />
-							<label>Password (confirm)</label> <input type="password" name="password2" />
-							<label>First Name</label> <input type="text" name="name" />
-							<label>Surname</label> <input type="text" name="surname"  />
-							<!--link per scorrere il div-->
-						<!--fine parte prima-->
+							<label>Email</label> <input type="text" class="enewsbox validate[required,custom[email]]" name="e-mail" id="e-mail"/>
+							<label>Password</label> <input type="password" class="enewsbox validate[required]" name="password1" id="password1"/>
+							<label>Password (confirm)</label> <input type="password" class="enewsbox validate[required,equals[password1]]" name="password2" id="password2"/>
+							<label>First Name</label> <input type="text" class="enewsbox validate[custom[onlyLetterSp],required]" name="name" id="name"/>
+							<label>Surname</label> <input type="text" class="enewsbox validate[custom[onlyLetterSp],required]" name="surname"  id="surname"/>
 						<!--inizio parte seconda-->
 							<p style="text-decoration:underline;font-weight:bold">Optional fields:</p>
-							<label>Address</label> <input type="text" name="address" />
-							<label>City:</label> <input type="text" name="city" />
-							<label>Phone:</label> <input type="text" name="phone" />
-							<input type="submit" value="Send"/>
-						<!--fine parte seconda-->
-						
+							<label>Address</label> <input type="text" name="address" class="enewsbox"/>
+							<label>City:</label> <input type="text" name="city" class="enewsbox"/>
+							<label>Phone:</label> <input type="text" name="phone" class="enewsbox"/>
+							<input type="submit" value="Send" class="button" style="margin-top: 5px;"/>
 				</form>
-      </div>
-			
-			<div id="right_nav">
-        <ul>                                        
-          <li><a href="home.html" title="">Register</a></li>
-          <li><a href="services.html" title="">About us</a></li>
-        </ul>
-      </div> 
-					
-    
-    </div><!--end of green box-->
-    
- 
-
-    <div id="footer">
-     	<div class="copyright">
-					Copyright &copy; BugBox 2011
-        </div>    
-    </div>  
- 
-   
-
-</div> <!--end of main container-->
-</body>
-</html>

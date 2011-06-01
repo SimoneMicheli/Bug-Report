@@ -6,7 +6,7 @@
       <li><a href="http://www.free-css.com/" >New Ticket</a></li>
       <li><a href="http://www.free-css.com/" >View your Ticket</a></li>
       <li><a href="http://www.free-css.com/" >View your Project</a></li>
-      <li><a href="http://www.free-css.com/" >Logout</a></li>
+      <li><a href="./execute_logout.php" >Logout</a></li>
     </ul>
     <h3 class="leftbox header_small">Last Update</h3>
     <div class="leftbox features">

@@ -23,6 +23,14 @@ class pgDB{
 	}
 	
 	public function query($query){
+	    $data=pg_query($this->db,$query);
+	    if($data)
+	        return new DBResults($data);
+	    else
+	        throw new Exception('Query Fail '.$query,1);
+	}
+	
+	public function multiple($query){
 		if (!pg_connection_busy($this->db)) {
       if (!pg_send_query($this->db, $query))
 				throw new Exception('Query Fail',1);
@@ -38,7 +46,7 @@ class pgDB{
 	
 	public function transaction($query){
 	    $query="BEGIN;".$query."COMMIT;";
-	    RETURN $this->query($query);
+	    return $this->multiple($query);
 	}
 	
 	public function getResults(){
@@ -82,6 +90,9 @@ class DBResults implements Iterator{
 	}
 	public function valid (){
 		return isset($this->results[$this->pos]);
+	}
+	public function first(){
+	    return $this->results[0];
 	}
 }
 ?>

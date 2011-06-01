@@ -1,29 +1,33 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:38:13
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-01 08:40:46
          compiled from "./templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3311560634de2aeb5b4b008-56713032%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:17819987414de5deeeb49a94-37780481%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1306701492,
+      1 => 1306869704,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3311560634de2aeb5b4b008-56713032',
+  'nocache_hash' => '17819987414de5deeeb49a94-37780481',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
+<?php  $_config = new Smarty_Internal_Config("test.conf", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars("header", 'local'); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title><?php echo $_smarty_tpl->getVariable('title')->value;?>
+<title><?php echo $_smarty_tpl->getConfigVariable('title');?>
 </title>
 <link href="./stylesheets/common.css" rel="stylesheet" type="text/css" />
+<script src="./js/jquery-1.6.1.min.js" type="text/javascript"></script>
+<link href="./js/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+<script src="./js/facebox/facebox.js" type="text/javascript"></script> 
 </head>
 <body>
 <!-- Start Header -->
@@ -31,6 +35,10 @@ $_smarty_tpl->decodeProperties(array (
   <div class="container">
     <h1><a href="" title="BUGBOX">BUGBOX<span></span></a></h1>
     <hr />
+    <?php if ($_smarty_tpl->getVariable('userDisplayName')->value){?>
+    <span id="navigation">Bentornato: <?php echo $_smarty_tpl->getVariable('userDisplayName')->value;?>
+</span>
+    <?php }?>
     <!-- top navigation -->
     <!--<ul id="navigation">
       <li class="active"><a href="http://www.free-css.com/" title="Home">Home</a></li>

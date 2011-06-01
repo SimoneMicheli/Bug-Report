@@ -1,23 +1,24 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:37:28
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-01 08:40:46
          compiled from "./templates/footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6606517894de2ae88db1966-46275389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9238506644de5deeec38e31-80390022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1306700464,
+      1 => 1306839901,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6606517894de2ae88db1966-46275389',
+  'nocache_hash' => '9238506644de5deeec38e31-80390022',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <!-- Start Bottom Information -->
+</div>
 <div id="bottominfo">
   <div class="container">
     <!-- bottom left information -->

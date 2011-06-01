@@ -1,5 +1,5 @@
 <?php
-include_once("../libs/database.php");
+include_once("../libs/database.lib.php");
 $db = new pgDb(true);
 $db->connect();
 $db->transaction("CREATE TABLE public.utente (
@@ -49,7 +49,7 @@ descrizione text not null,
 datacreazione timestamp with time zone not null default current_timestamp,
 ultimamodifica timestamp with time zone not null default current_timestamp,
 priorita integer not null CHECK (priorita>0 AND priorita<6),
-status char(15) not null default 'nuovo' CHECK (status in ('nuovo','lavorazione','test','risolto')),
+status char(15) not null default 'nuovo' CHECK (status in ('nuovo','lavorazione','test','risolto','invalido')),
 assegnato integer references utente(id),
 datachiusura timestamp with time zone default null,
 categoria varchar(255) not null,
@@ -94,6 +94,6 @@ data timestamp with time zone not null default current_timestamp,
 id_creatore integer not null references utente(id),
 id_destinatario integer not null references utente(id),
 PRIMARY KEY (id)
-)");
+);");
 $db->close();
 ?>
