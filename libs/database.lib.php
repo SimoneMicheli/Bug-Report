@@ -27,7 +27,8 @@ class pgDB{
 	    if($data)
 	        return new DBResults($data);
 	    else
-	        throw new Exception('Query Fail '.$query,1);
+	        $err = pg_last_error($this->db);
+	        throw new Exception('Query Fail '.$err,1);
 	}
 	
 	public function multiple($query){

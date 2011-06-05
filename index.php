@@ -1,7 +1,7 @@
 <?php
 include_once('./libs/Smarty.class.php');
 include_once('./libs/database.lib.php');
-include_once("./libs/user.lib.php");
+include_once("./libs/session.lib.php");
 $s = new Smarty();
 $db = new pgDB(true);
 $user = new session();

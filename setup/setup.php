@@ -5,7 +5,7 @@ $db->connect();
 $db->transaction("CREATE TABLE public.utente (
 id serial not null,
 email varchar(255) unique not null,
-password char(16) not null,
+password char(32) not null,
 nome varchar(255) not null,
 cognome varchar(255) not null,
 indirizzo varchar(255),

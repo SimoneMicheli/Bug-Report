@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* =CALL LIBRARY */
-	@import url("reset-min.css"); /* ------- Reset all CSS Styles */
+    @import url("reset-min.css"); /* ------- Reset all CSS Styles */
 
 /* =GENERAL - the general styles */
 	body{

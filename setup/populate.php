@@ -4,15 +4,15 @@ $db = new pgDb();
 $db->connect();
 $db->transaction("
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('utente1@bugbox.it','1','Utente1','Prova',null,'Paese',null);
+VALUES ('utente1@bugbox.it',md5('1'),'Utente1','Prova',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente2@bugbox.it','2','Utente2','Prova',null,'Paese',null);
+VALUES ('Utente2@bugbox.it',md5('2'),'Utente2','Prova',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente3@bugbox.it','3','Utente3','Prova',null,'Paese',null);
+VALUES ('Utente3@bugbox.it',md5('3'),'Utente3','Prova',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente4@bugbox.it','4','Utente4','Prova',null,'Paese',null);
+VALUES ('Utente4@bugbox.it',md5('4'),'Utente4','Prova',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente5@bugbox.it','5','Utente5','Prova',null,'Paese',null);
+VALUES ('Utente5@bugbox.it',md5('5'),'Utente5','Prova',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
 VALUES ('Utente6@bugbox.it','6','Utente6','Prova',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
@@ -31,6 +31,8 @@ INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono)
 VALUES ('Utente13@bugbox.it','13','Utente13','Prova',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
 VALUES ('Utente14@bugbox.it','14','Utente14','Prova',null,'Paese',null);
+INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
+VALUES ('simone@bugbox.it',md5('simone'),'simone','micheli','via xxiv','italia','zogno');
 
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
 VALUES ('Progetto1','Descrizione1','www1','1');

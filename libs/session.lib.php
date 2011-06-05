@@ -17,7 +17,7 @@ class session{
     public function login($mail,$password){
         $db = new pgDB();
         $db->connect();
-        $user=$db->query("select * from utente where email='$mail' and password='$password'");
+        $user=$db->query("select * from utente where email='$mail' and password=md5('$password')");
         if($user->getNumRows() > 0){
             $user=$user->first();
             $_SESSION['loggedIn']=true;
@@ -48,6 +48,10 @@ class session{
     
     public function getDisplayName(){
         return $_SESSION['nome']." ".$_SESSION['cognome'];
+    }
+    
+    public function getUserId(){
+        return $_SESSION['id'];
     }
 }
 

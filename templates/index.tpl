@@ -19,5 +19,4 @@
     </div>
 
     <hr />
-  </div>
 {include file="footer.tpl"}
