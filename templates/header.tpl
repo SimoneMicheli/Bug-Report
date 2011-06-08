@@ -8,6 +8,11 @@
 <script src="./js/jquery-1.6.1.min.js" type="text/javascript"></script>
 <link href="./js/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
 <script src="./js/facebox/facebox.js" type="text/javascript"></script> 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('a[rel*=facebox]').facebox() ;
+    });
+</script>
 </head>
 <body>
 <!-- Start Header -->

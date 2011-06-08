@@ -1,9 +1,4 @@
 {include file="header.tpl"}
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('a[rel*=facebox]').facebox() ;
-        });
-    </script>
     <div class="article_wrapper">
       {if $error}
       <span class="error">{$error}</span>

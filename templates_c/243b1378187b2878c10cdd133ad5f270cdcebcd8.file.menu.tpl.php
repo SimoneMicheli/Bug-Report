@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-01 08:40:46
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-08 18:21:01
          compiled from "./templates/menu.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7617530134de5deeec15411-43590099%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13911329944defa16d901874-48078164%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '243b1378187b2878c10cdd133ad5f270cdcebcd8' => 
     array (
       0 => './templates/menu.tpl',
-      1 => 1306869560,
+      1 => 1307550058,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7617530134de5deeec15411-43590099',
+  'nocache_hash' => '13911329944defa16d901874-48078164',
   'function' => 
   array (
   ),
@@ -21,7 +21,7 @@ $_smarty_tpl->decodeProperties(array (
     <h3 class="leftbox">Menu</h3>
     <ul class="leftbox borderedlist">
       <li><a href="http://www.free-css.com/" >Home</a></li>
-      <li><a href="http://www.free-css.com/" >New Project</a></li>
+      <li><a href="./new_project.html" rel="facebox">New Project</a></li>
       <li><a href="http://www.free-css.com/" >New Ticket</a></li>
       <li><a href="http://www.free-css.com/" >View your Ticket</a></li>
       <li><a href="http://www.free-css.com/" >View your Project</a></li>

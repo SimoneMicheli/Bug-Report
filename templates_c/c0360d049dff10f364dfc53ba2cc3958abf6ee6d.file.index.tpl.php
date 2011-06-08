@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-03 18:55:00
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-08 18:22:24
          compiled from "./templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18371184254de911e4721294-91710287%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9622496844defa1c0786075-79919153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1307120099,
+      1 => 1307550094,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18371184254de911e4721294-91710287',
+  'nocache_hash' => '9622496844defa1c0786075-79919153',
   'function' => 
   array (
   ),
@@ -19,11 +19,6 @@ $_smarty_tpl->decodeProperties(array (
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php $_template = new Smarty_Internal_Template("header.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('a[rel*=facebox]').facebox() ;
-        });
-    </script>
     <div class="article_wrapper">
       <?php if ($_smarty_tpl->getVariable('error')->value){?>
       <span class="error"><?php echo $_smarty_tpl->getVariable('error')->value;?>

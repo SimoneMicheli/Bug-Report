@@ -2,7 +2,7 @@
     <h3 class="leftbox">Menu</h3>
     <ul class="leftbox borderedlist">
       <li><a href="http://www.free-css.com/" >Home</a></li>
-      <li><a href="http://www.free-css.com/" >New Project</a></li>
+      <li><a href="./new_project.html" rel="facebox">New Project</a></li>
       <li><a href="http://www.free-css.com/" >New Ticket</a></li>
       <li><a href="http://www.free-css.com/" >View your Ticket</a></li>
       <li><a href="http://www.free-css.com/" >View your Project</a></li>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-03 20:44:43
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-08 18:22:08
          compiled from "./templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11575035154de92b9b2d1df3-80327073%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16190100594defa1b06d9fd0-41200899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1307126677,
+      1 => 1307550125,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11575035154de92b9b2d1df3-80327073',
+  'nocache_hash' => '16190100594defa1b06d9fd0-41200899',
   'function' => 
   array (
   ),
@@ -28,6 +28,11 @@ $_smarty_tpl->decodeProperties(array (
 <script src="./js/jquery-1.6.1.min.js" type="text/javascript"></script>
 <link href="./js/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
 <script src="./js/facebox/facebox.js" type="text/javascript"></script> 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('a[rel*=facebox]').facebox() ;
+    });
+</script>
 </head>
 <body>
 <!-- Start Header -->

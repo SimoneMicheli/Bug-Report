@@ -24,11 +24,13 @@ class pgDB{
 	
 	public function query($query){
 	    $data=pg_query($this->db,$query);
-	    if($data)
-	        return new DBResults($data);
+	    if($data){
+	        $this->results=Array();
+	        $this->results[0] = new DBResults($data);
+	        return $this->results[0];
+	    }
 	    else
-	        $err = pg_last_error($this->db);
-	        throw new Exception('Query Fail '.$err,1);
+	        return false;
 	}
 	
 	public function multiple($query){

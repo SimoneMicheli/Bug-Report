@@ -15,18 +15,18 @@ $(document).ready(function() {
     <thead>
         <tr>
             <th>id</th>
-            <th>nome</th>
-            <th>descrizione</th>
-            <th>creato il</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Created on</th>
         </tr>
     </thead>
     <tbody>
         {foreach from=$projects item="project"}
         <tr class="{$project->tipo}">
-            <td><a href="ww.google.it">{$project->id}</a></td>
-            <td><a href="ww.google.it">{$project->nome}</a></td>
-            <td><a href="ww.google.it">{$project->descrizione}</a></td>
-            <td><a href="ww.google.it">{$project->creatoil}</a></td>
+            <td><a href="./view_project.php?id={$project->id}">{$project->id}</a></td>
+            <td><a href="./view_project.php?id={$project->id}">{$project->nome}</a></td>
+            <td><a href="./view_project.php?id={$project->id}">{$project->descrizione}</a></td>
+            <td><a href="./view_project.php?id={$project->id}">{$project->creatoil}</a></td>
         </tr>
         {/foreach}
     </tbody>

@@ -58,10 +58,13 @@
 	}
 	.bottomcolumn{
 		float: left;
-		width:322px;
+		width: 644px;
 		margin-right: 18px;
 	}
-	.bottomright{margin-right:0;}
+	.bottomright{
+		margin-right:0;
+		width: 322px;
+	}
 	
 /* =HEADER - the header styles */
 	#header .container{height: 253px;}
@@ -161,13 +164,15 @@
 	}
 	ul.iconlist  li a:hover{background: #E9E4DE url(../images/footer_list.jpg) left top no-repeat;color: #42423b;}
 	.enewsbox{
-		width: 180px;
+		width: 100%;
 		height: 17px;
 		padding:3px 5px;
 		border: 4px solid #5599A7;
 		font-size:13px;
 		padding: 5px;
         margin-bottom: 15px;
+        margin-left: -9px;
+        resize: none;
 	}
 	.button{
 		width: auto;
@@ -222,6 +227,10 @@
     position: relative;
     padding: 8px;
     border: 4px solid #E82A2A;
+}
+
+form#new_project{
+    width: 600px;
 }
 /*-------------facebox style-----------------*/
 #facebox h1{

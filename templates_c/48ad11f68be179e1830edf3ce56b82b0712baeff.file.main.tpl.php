@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-05 14:13:58
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-08 20:50:58
          compiled from "./templates/main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18844425784deb7306b99f32-21099977%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13568386904defc4926309c6-83229169%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '48ad11f68be179e1830edf3ce56b82b0712baeff' => 
     array (
       0 => './templates/main.tpl',
-      1 => 1307276037,
+      1 => 1307559055,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18844425784deb7306b99f32-21099977',
+  'nocache_hash' => '13568386904defc4926309c6-83229169',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $(document).ready(function() {
     <thead>
         <tr>
             <th>id</th>
-            <th>nome</th>
-            <th>descrizione</th>
-            <th>creato il</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Created on</th>
         </tr>
     </thead>
     <tbody>
@@ -48,13 +48,17 @@ if ($_smarty_tpl->_count($_from) > 0){
 ?>
         <tr class="<?php echo $_smarty_tpl->getVariable('project')->value->tipo;?>
 ">
-            <td><a href="ww.google.it"><?php echo $_smarty_tpl->getVariable('project')->value->id;?>
+            <td><a href="./view_project.php?id=<?php echo $_smarty_tpl->getVariable('project')->value->id;?>
+"><?php echo $_smarty_tpl->getVariable('project')->value->id;?>
 </a></td>
-            <td><a href="ww.google.it"><?php echo $_smarty_tpl->getVariable('project')->value->nome;?>
+            <td><a href="./view_project.php?id=<?php echo $_smarty_tpl->getVariable('project')->value->id;?>
+"><?php echo $_smarty_tpl->getVariable('project')->value->nome;?>
 </a></td>
-            <td><a href="ww.google.it"><?php echo $_smarty_tpl->getVariable('project')->value->descrizione;?>
+            <td><a href="./view_project.php?id=<?php echo $_smarty_tpl->getVariable('project')->value->id;?>
+"><?php echo $_smarty_tpl->getVariable('project')->value->descrizione;?>
 </a></td>
-            <td><a href="ww.google.it"><?php echo $_smarty_tpl->getVariable('project')->value->creatoil;?>
+            <td><a href="./view_project.php?id=<?php echo $_smarty_tpl->getVariable('project')->value->id;?>
+"><?php echo $_smarty_tpl->getVariable('project')->value->creatoil;?>
 </a></td>
         </tr>
         <?php }} ?>
