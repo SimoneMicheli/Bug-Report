@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="./stylesheets/validationEngine.jquery.css" type="text/css"/>
 <script language="JavaScript" type="text/javascript">
 $(document).ready(function(){
-    //$("#join").validationEngine('attach');
     $("#new_project").validationEngine({promptPosition : "topRight", scroll: true}); 
     $(document).bind('close.facebox', function() { $("#new_project").validationEngine("hideAll"); });
     $("#new_project textarea").elastic();
@@ -26,19 +25,11 @@ $(document).ready(function(){
         <h1>New Project</h1>
 			<form action="execute_new_project.php" method="post" id="new_project" >
 					<!--ho lasciato le classi vuote perche non sapevo come riempirle (per la validazione)-->
-					<label>Project Name</label> <input type="text" class="enewsbox" name="name" id="name"/>
-					<label>Description</label> <textarea name="description" id="description" rows="5" cols="20" class="enewsbox"/></textarea>
-					
+					<label>Project Name</label> <input type="text" class="enewsbox validate[required]" name="name" id="name" />
+					<label>Description</label> <textarea name="description" id="description" rows="5" cols="20" class="enewsbox validate[required]"/></textarea>
 					<p style="text-decoration:underline;font-weight:bold">Invite other users:</p>
-					<!--ripetere con tasto aggiungi altro-->
-						<!--<select style="display:inherit" name="typeuser" >
-						  <option value="notifier" selected="selected">Notifier</option>
-						  <option value="developper">Developer</option>
-						  <option value="administrator">Administrator</option>
-						</select>--><!--non andare a capo-->
-						<!--<input type="text" class="enewsbox" name="newuser" id="newuser"  value="email" onfocus="if (this.value=='email') this.value='';" onblur="if (this.value=='') this.value='email';" />-->
 						<label>Notifier:</label>
-						<select name="notifier" id="notifier">
+						<select name="notifier" id="notifier" >
 						</select>
 						<label>Developer:</label>
 						<select name="developer" id="developer"/>
@@ -46,14 +37,8 @@ $(document).ready(function(){
 						<label>Administrator:</label>
 						<select name="administrator" id="administrator"/>
 						</select>
-					<!--fine ripetere con tasto aggiungi altro-->
-					
-					<p style="text-decoration:underline;font-weight:bold">Categories:</p>
-					<!--ripetere con tasto aggiungi altro-->
-						<input type="text" class="" name="category" id="category" class="enewsbox"/>
-					<!--fine ripetere con tasto aggiungi altro-->
-					
-					
+					<p style="text-decoration:underline;font-weight:bold">Categories: (comma separated)</p>
+					<input type="text" class="enewsbox validate[required]" name="category" id="category" />
 					<p style="text-decoration:underline;font-weight:bold">Optional fields:</p>
 					<label>Web Address</label> <input type="text" id="webaddress" name="webaddress" class="enewsbox"/>
 					<label>Notes</label> <textarea name="notes" id="notes" rows="5" cols="20" class="enewsbox"/></textarea>

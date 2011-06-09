@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-08 20:50:58
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-09 18:59:24
          compiled from "./templates/main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13568386904defc4926309c6-83229169%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:17645395914df0fbec772e76-85709949%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '48ad11f68be179e1830edf3ce56b82b0712baeff' => 
     array (
       0 => './templates/main.tpl',
-      1 => 1307559055,
+      1 => 1307638749,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13568386904defc4926309c6-83229169',
+  'nocache_hash' => '17645395914df0fbec772e76-85709949',
   'function' => 
   array (
   ),
@@ -30,6 +30,10 @@ $(document).ready(function() {
 } );
 </script>
 <div class="article_wrapper">
+      <?php if ($_smarty_tpl->getVariable('error')->value){?>
+      <span class="error"><?php echo $_smarty_tpl->getVariable('error')->value;?>
+</span>
+      <?php }?>
 <h2>Projects</h2>
 <table id="projects" class="display">
     <thead>

@@ -16,5 +16,7 @@ $projects = $db->query("select progetto.id as id, progetto.nome as nome, parteci
         on partecipante.id_progetto = progetto.id
         where partecipante.id_utente = '".$user->getUserId()."'");
 $s->assign("projects",$projects);
+if(isset($_get['error']))
+    $s->assign("error","Invalid email or pwssword");
 $s->display("main.tpl");
 ?>

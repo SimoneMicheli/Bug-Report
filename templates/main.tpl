@@ -10,6 +10,9 @@ $(document).ready(function() {
 } );
 </script>
 <div class="article_wrapper">
+      {if $error}
+      <span class="error">{$error}</span>
+      {/if}
 <h2>Projects</h2>
 <table id="projects" class="display">
     <thead>
