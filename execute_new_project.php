@@ -10,9 +10,10 @@ if($_POST['name']!="" && $_POST['description']!=""){
     $tmp = array_intersect($_POST['notifier'],$_POST['developer']);
     $tmp1 = array_intersect($_POST['notifier'],$_POST['administrator']);
     $tmp2 = array_intersect($_POST['developer'],$_POST['administrator']);
-    if (count($tmp)!=0 || count($tmp1)!=0 || count($tmp2)!=0)
+    if (count($tmp)!=0 || count($tmp1)!=0 || count($tmp2)!=0){
         header( "Location: ./main.php?error=1" );
         return ;
+    }
 	$db = new pgDB();
 	$db->connect();
 	//get next project id
