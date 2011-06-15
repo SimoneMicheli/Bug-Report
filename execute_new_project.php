@@ -34,18 +34,20 @@ if($_POST['name']!="" && $_POST['description']!=""){
 	}
 	$query=$query."; insert into partecipante(id_utente,id_progetto,tipo) VALUES ";
 	//set user as administrator
-	$query=$query."(".$user->getUserId().",$project_id,'amministratore')";
+	$query=$query."(".$user->getUserId().",$project_id,'administrator')";
 	//set notifier
 	foreach ($_POST['notifier'] as $notifier)
-	   $query=$query.",($notifier,$project_id,'segnalatore')";
+	   $query=$query.",($notifier,$project_id,'notifier')";
 	foreach ($_POST['developer'] as $developer)
-    	$query=$query.",($developer,$project_id,'sviluppatore')";
+    	$query=$query.",($developer,$project_id,'developper')";
 	foreach ($_POST['administrator'] as $administrator)
-	    $query=$query.",($administrator,$project_id,'amministratore')";
+	    $query=$query.",($administrator,$project_id,'administrator')";
 	$query=$query.";";
+	$query = $query." insert into notaprogetto (testo,id_creatore,id_progetto) values ('".$_POST['notes']."',".$user->getUserId().",".$project_id.");";
+	
 	$res = $db->transaction($query);
 	header( "Location: ./main.php" );
 }else{
-    header( "Location: ./main.php?error=2" );
+    header( "Location: ./main.php?error=1" );
 }
 ?>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-08 18:22:08
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-15 09:28:38
          compiled from "./templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16190100594defa1b06d9fd0-41200899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15929347204df85f26682ee5-99160988%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1307550125,
+      1 => 1308083560,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16190100594defa1b06d9fd0-41200899',
+  'nocache_hash' => '15929347204df85f26682ee5-99160988',
   'function' => 
   array (
   ),
@@ -38,7 +38,7 @@ $_smarty_tpl->decodeProperties(array (
 <!-- Start Header -->
 <div id="header">
   <div class="container">
-    <h1><a href="" title="BUGBOX">BUGBOX<span></span></a></h1>
+    <h1><a href="./" title="BUGBOX">BUGBOX<span></span></a></h1>
     <hr />
     <?php if ($_smarty_tpl->getVariable('userDisplayName')->value){?>
     <span id="navigation">Bentornato: <?php echo $_smarty_tpl->getVariable('userDisplayName')->value;?>
@@ -60,8 +60,5 @@ $_smarty_tpl->decodeProperties(array (
 </div>
 <!-- Start Main Content -->
 <div id="main" class="container">
-  <!-- left column (products and features) -->
-  <?php $_template = new Smarty_Internal_Template("menu.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
   <!-- main content area -->
-  <div id="center">
+  

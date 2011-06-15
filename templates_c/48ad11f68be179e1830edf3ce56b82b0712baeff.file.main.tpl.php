@@ -1,23 +1,25 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-09 18:59:24
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-15 09:54:30
          compiled from "./templates/main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17645395914df0fbec772e76-85709949%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9885655694df86536853255-89316663%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '48ad11f68be179e1830edf3ce56b82b0712baeff' => 
     array (
       0 => './templates/main.tpl',
-      1 => 1307638749,
+      1 => 1308124468,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17645395914df0fbec772e76-85709949',
+  'nocache_hash' => '9885655694df86536853255-89316663',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php $_template = new Smarty_Internal_Template("header.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php unset($_template);?>
+<?php $_template = new Smarty_Internal_Template("menu.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate();?><?php unset($_template);?>
 <link href="./stylesheets/demo_table_jui.css" type="text/css" rel="stylesheet">
 <script src="./js/jquery.dataTables.js" type="text/javascript" ></script>
@@ -41,6 +43,8 @@ $(document).ready(function() {
             <th>id</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Role</th>
+            <th>Ticket</th>
             <th>Created on</th>
         </tr>
     </thead>
@@ -62,6 +66,12 @@ if ($_smarty_tpl->_count($_from) > 0){
 "><?php echo $_smarty_tpl->getVariable('project')->value->descrizione;?>
 </a></td>
             <td><a href="./view_project.php?id=<?php echo $_smarty_tpl->getVariable('project')->value->id;?>
+"><?php echo $_smarty_tpl->getVariable('project')->value->tipo;?>
+</a></td>
+            <td><a href="./view_project.php?id=<?php echo $_smarty_tpl->getVariable('project')->value->id;?>
+"><?php echo $_smarty_tpl->getVariable('project')->value->num_ticket;?>
+</a></td>
+            <td><a href="./view_project.php?id=<?php echo $_smarty_tpl->getVariable('project')->value->id;?>
 "><?php echo $_smarty_tpl->getVariable('project')->value->creatoil;?>
 </a></td>
         </tr>
@@ -69,5 +79,3 @@ if ($_smarty_tpl->_count($_from) > 0){
     </tbody>
 </table>
 </div>
-<?php $_template = new Smarty_Internal_Template("footer.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>

@@ -5,17 +5,7 @@
     <!-- bottom left information -->
     <div class="bottomcolumn">
       <h3>Note to you</h3>
-      <p>Last note sendt to to you</p>
-      <ul class="borderedlist iconlist">
-        <li><a href="http://www.free-css.com/" title="Keep your clients in the know">Keep your clients in the know</a></li>
-        <li><a href="http://www.free-css.com/" title="Current specials and discounts">Current specials and discounts</a></li>
-        <li><a href="http://www.free-css.com/" title="Links to your services and promos">Links to your services and promos</a></li>
-      </ul>
-    </div>
-    <!-- bottom center information -->
-    <div class="bottomcolumn">
-      <h3>Recent BUGBOX</h3>
-      <p>Last update from bugbox</p>
+      <p>Last note sent to to you</p>
       <ul class="borderedlist iconlist">
         <li><a href="http://www.free-css.com/" title="Keep your clients in the know">Keep your clients in the know</a></li>
         <li><a href="http://www.free-css.com/" title="Current specials and discounts">Current specials and discounts</a></li>

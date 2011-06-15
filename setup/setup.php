@@ -29,14 +29,13 @@ UNIQUE(id_proprietario,nome)
 CREATE TABLE public.partecipante (
 id_utente integer not null references utente(id),
 id_progetto integer not null references progetto(id),
-tipo varchar(20) not null default 'segnalatore' CHECK (tipo in ('amministratore','sviluppatore','segnalatore')),
+tipo varchar(20) not null default 'segnalatore' CHECK (tipo in ('administrator','developper','notifier')),
 creatoil timestamp with time zone not null default current_timestamp,
 PRIMARY KEY (id_utente,id_progetto)
 );
 
 CREATE TABLE public.categoria (
 nome varchar(255) not null,
-descrizione text not null,
 id_progetto integer not null references progetto(id),
 PRIMARY KEY (nome,id_progetto),
 UNIQUE (nome,id_progetto)
@@ -49,7 +48,7 @@ descrizione text not null,
 datacreazione timestamp with time zone not null default current_timestamp,
 ultimamodifica timestamp with time zone not null default current_timestamp,
 priorita integer not null CHECK (priorita>0 AND priorita<6),
-status char(15) not null default 'nuovo' CHECK (status in ('nuovo','lavorazione','test','risolto','invalido')),
+status char(15) not null default 'new' CHECK (status in ('new','working','testing','resolved','invalid')),
 assegnato integer references utente(id),
 datachiusura timestamp with time zone default null,
 categoria varchar(255) not null,
@@ -96,4 +95,5 @@ id_destinatario integer not null references utente(id),
 PRIMARY KEY (id)
 );");
 $db->close();
+header( "Location: ./populate.php" );
 ?>

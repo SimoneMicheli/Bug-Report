@@ -18,7 +18,7 @@
 <!-- Start Header -->
 <div id="header">
   <div class="container">
-    <h1><a href="" title="BUGBOX">BUGBOX<span></span></a></h1>
+    <h1><a href="./" title="BUGBOX">BUGBOX<span></span></a></h1>
     <hr />
     {if $userDisplayName}
     <span id="navigation">Bentornato: {$userDisplayName}</span>
@@ -39,7 +39,5 @@
 </div>
 <!-- Start Main Content -->
 <div id="main" class="container">
-  <!-- left column (products and features) -->
-  {include file="menu.tpl"}
   <!-- main content area -->
-  <div id="center">
+  

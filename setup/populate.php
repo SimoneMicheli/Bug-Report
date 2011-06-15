@@ -4,134 +4,130 @@ $db = new pgDb();
 $db->connect();
 $db->transaction("
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('utente1@bugbox.it',md5('1'),'Utente1','Prova',null,'Paese',null);
+VALUES ('steve@bugbox.it',md5('steve'),'Steve','Jobs',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente2@bugbox.it',md5('2'),'Utente2','Prova',null,'Paese',null);
+VALUES ('gianluca@bugbox.it',md5('gianluca'),'Gianluca','Demarinis','Via Cornagera 15','Selvino',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente3@bugbox.it',md5('3'),'Utente3','Prova',null,'Paese',null);
+VALUES ('simone@bugbox.it',md5('simone'),'Simone','Micheli','Via 24 Maggio','Zogno',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente4@bugbox.it',md5('4'),'Utente4','Prova',null,'Paese',null);
+VALUES ('mario@bugbox.it',md5('mario'),'Mario','Verdi',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente5@bugbox.it',md5('5'),'Utente5','Prova',null,'Paese',null);
+VALUES ('carlo@bugbox.it',md5('carlo'),'Carlo','Dentella',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente6@bugbox.it','6','Utente6','Prova',null,'Paese',null);
+VALUES ('giuseppe@bugbox.it',md5('giuseppe'),'Giuseppe','Psaila',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente7@bugbox.it','7','Utente7','Prova',null,'Paese',null);
+VALUES ('anna@bugbox.it',md5('anna'),'Anna','Zanga',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente8@bugbox.it','8','Utente8','Prova',null,'Paese',null);
+VALUES ('maria@bugbox.it',md5('maria'),'Maria','Tedesco',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente9@bugbox.it','9','Utente9','Prova',null,'Paese',null);
+VALUES ('pia@bugbox.it',md5('pia'),'Pia','Carrara',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente10@bugbox.it','10','Utente10','Prova',null,'Paese',null);
+VALUES ('antonia@bugbox.it',md5('antonia'),'Antonia','Seghezzi',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente11@bugbox.it','11','Utente11','Prova',null,'Paese',null);
+VALUES ('barbara@bugbox.it',md5('barbara'),'Barbara','Camozzi',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente12@bugbox.it','12','Utente12','Prova',null,'Paese',null);
+VALUES ('jennifer@bugbox.it',md5('jennifer'),'Jennifer','Pellegrino',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente13@bugbox.it','13','Utente13','Prova',null,'Paese',null);
+VALUES ('carlotta@bugbox.it',md5('carlotta'),'Carlotta','Gotti',null,'Paese',null);
 INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('Utente14@bugbox.it','14','Utente14','Prova',null,'Paese',null);
-INSERT INTO utente(email,password,nome,cognome,indirizzo,residenza,telefono) 
-VALUES ('simone@bugbox.it',md5('simone'),'simone','micheli','via xxiv','italia','zogno');
+VALUES ('stefano@bugbox.it',md5('stefano'),'Stefano','Demarinis',null,'Paese',null);
 
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto1','Descrizione1','www1','1');
+VALUES ('Iphone 5','Progetto di creazione di un nuovo cellulare','www.iphone5.it','1');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto2','Descrizione2','www2','2');
+VALUES ('Safari 12','Progetto di creazione di un nuovo browser','www.safari12.it','2');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto3','Descrizione3','www3','3');
+VALUES ('Firefox 5','Progetto di creazione di un nuovo browser','www.firefox5.it','3');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto4','Descrizione4','www4','4');
+VALUES ('Windows 8','Progetto di creazione di un nuovo sistema operativo','www.windows8.it','4');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto5','Descrizione5','www5','5');
+VALUES ('Ipod 4','Progetto di creazione di un nuovo lettore mp3','www.ipod4.it','5');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto6','Descrizione6','www6','6');
+VALUES ('Sony Ericcson Arc 2','Progetto di creazione di un nuovo cellulare','www.sony.it','6');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto7','Descrizione7','www7','1');
+VALUES ('Apollo 15','Progetto di creazione di un nuovo missile','www.siampazzi.it','2');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto8','Descrizione8','www8','2');
+VALUES ('Progetto inutile','Progetto di creazione di niente','www.boh.it','7');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto9','Descrizione9','www9','7');
+VALUES ('Altro progetto inutile','Progetto di creazione di niente','www.riboh.it','8');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto10','Descrizione10','www10','8');
+VALUES ('Ipad 3','Progetto di creazione di un nuovo tablet','www.ipad3.it','1');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto11','Descrizione11','www11','10');
+VALUES ('Mac 999','Progetto di creazione di un nuovo pc','www.mac999.it','10');
 INSERT INTO progetto(nome,descrizione,indirizzoweb,id_proprietario) 
-VALUES ('Progetto12','Descrizione12','www12','14');
+VALUES ('Albinoleffe','Progetto di creazione di una squadra migliore','www.albinoleffe.it','14');
 
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','5','segnalatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','8','segnalatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('3','9','segnalatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','10','segnalatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','11','segnalatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','3','segnalatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('6','6','segnalatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','1','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','2','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('3','3','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','4','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','5','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('6','5','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('7','11','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','11','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('9','12','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('14','8','amministratore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','9','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('7','10','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('6','11','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','12','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','12','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','12','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','1','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','7','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('3','4','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','6','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','8','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','1','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','2','sviluppatore');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','3','sviluppatore');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','5','notifier');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','8','notifier');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('3','9','notifier');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','10','notifier');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','11','notifier');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','3','notifier');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('6','6','notifier');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','1','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','2','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('3','3','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','4','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','5','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('6','5','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('7','11','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','11','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('9','12','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('14','8','administrator');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','9','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('7','10','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('6','11','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','12','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','12','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','12','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','1','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','7','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('3','4','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','6','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','8','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','1','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','2','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','3','developper');
 
 
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','1');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria2','Descrizione2','1');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria3','Descrizione3','1');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','2');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria2','Descrizione2','2');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','3');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','4');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','5');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria2','Descrizione2','3');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria2','Descrizione2','4');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria4','Descrizione4','5');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','6');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','7');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','8');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','9');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria1','Descrizione1','10');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria2','Descrizione2','10');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria5','Descrizione5','10');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria6','Descrizione6','10');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria8','Descrizione8','11');
-INSERT INTO categoria(nome,descrizione,id_progetto) VALUES ('Categoria10','Descrizione10','12');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Antenna','1');
+INSERT INTO categoria(nome,id_progetto) VALUES ('WiFi','1');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Schermo','1');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Velocita','2');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Strumenti per sviluppatori','2');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','3');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','4');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','5');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Categoria','3');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Categoria','4');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Categoria','5');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','6');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','7');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','8');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','9');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','10');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Categoria','10');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Nuova Categoria','10');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Categoria senza nome','10');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','11');
+INSERT INTO categoria(nome,id_progetto) VALUES ('Altra categoria','12');
 
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket1','Descrizione1','1','Categoria1','1','1','1');
+ VALUES ('Non riceve l antenna','L antenna non riceve molto bene in galleria','1','Antenna','1','1','1');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket2','Descrizione2','1','Categoria2','1','2','2');
+ VALUES ('Wi-fi non funzionante','Il wi-fi si scollega se il cellulare viene spento','2','WiFi','1','2','2');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket3','Descrizione3','1','Categoria3','1','3','3');
+ VALUES ('Schermo piccolo','Lo schermo e da ingrandire','3','Schermo','1','3','3');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket4','Descrizione4','1','Categoria4','5','1','1');
+ VALUES ('Ticket4','Descrizione4','4','Altra categoria','5','1','1');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket5','Descrizione5','1','Categoria2','10','4','5');
+ VALUES ('Ticket5','Descrizione5','5','Altra categoria','10','4','5');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket6','Descrizione6','1','Categoria10','12','8','5');
+ VALUES ('Ticket6','Descrizione6','4','Altra categoria','12','8','5');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket7','Descrizione7','1','Categoria1','5','12','11');
+ VALUES ('Ticket7','Descrizione7','3','Categoria','5','12','11');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket8','Descrizione8','1','Categoria6','10','4','6');
-INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket9','Descrizione9','1','Categoria3','1','8','10');
+ VALUES ('Ticket8','Descrizione8','2','Categoria senza nome','10','4','6');
 
 INSERT INTO file(estensione,id_ticket) VALUES ('png','1');
 INSERT INTO file(estensione,id_ticket) VALUES ('jpg','1');
@@ -181,17 +177,16 @@ INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo12','9','5');
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo13','10','1');
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo14','11','8');
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo15','11','4');
-INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo16','13','9');
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo17','13','1');
 
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo1','1','2');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo2','1','3');
-INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo3','2','2');
+INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo3','2','10');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo4','2','14');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo5','2','5');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo6','3','2');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo7','4','5');
-INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo8','6','6');
+INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo8','6','1');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo9','6','6');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo10','7','2');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo11','8','3');
@@ -203,4 +198,5 @@ INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo16','13'
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo17','13','1');
 ");
 $db->close();
+header( "Location: ./trigger.php" );
 ?>

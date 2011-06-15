@@ -5,11 +5,11 @@ $db->connect();
 $db->transaction("
 CREATE OR REPLACE FUNCTION controllaticket() RETURNS trigger AS \$controllaticket\$
 begin
-if (new.assegnato is null AND new.status <> 'nuovo')
+if (new.assegnato is null AND new.status <> 'new')
 then
 raise exception 'A new ticket must have an ID associated';
 end if;
-if (new.datachiusura is null AND new.status ='risolto')
+if (new.datachiusura is null AND new.status ='resolved')
 then
 raise exception 'A closed ticket must have a closed date';
 end if;
@@ -34,4 +34,5 @@ FOR EACH ROW EXECUTE PROCEDURE controllaticket();
 CREATE TRIGGER controllanotautente BEFORE INSERT OR UPDATE ON notautente
 FOR EACH ROW EXECUTE PROCEDURE controllanotautente();");
 $db->close();
+header( "Location: ../" );
 ?>

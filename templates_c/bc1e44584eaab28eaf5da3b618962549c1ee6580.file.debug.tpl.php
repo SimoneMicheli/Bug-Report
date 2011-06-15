@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-03 19:09:43
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-15 09:43:17
          compiled from "/home/simone/lappstack-3.0.6-0/apache2/htdocs/bugbox/libs/debug.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17893192574de915578e8ca9-10265433%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18620168994df8629516d2e0-67546475%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bc1e44584eaab28eaf5da3b618962549c1ee6580' => 
     array (
       0 => '/home/simone/lappstack-3.0.6-0/apache2/htdocs/bugbox/libs/debug.tpl',
-      1 => 1297460446,
+      1 => 1307831314,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17893192574de915578e8ca9-10265433',
+  'nocache_hash' => '18620168994df8629516d2e0-67546475',
   'function' => 
   array (
   ),
