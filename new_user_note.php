@@ -56,5 +56,4 @@ $(document).ready(function(){
 							    </select>
 							<label>Text:</label> <textarea name="notes" id="notes" rows="5" cols="40" class="enewsbox validate[required]"/></textarea>
 							<input type="submit" value="Send" class="button" style="margin-top: 5px;"/>
-							'
 				</form>
