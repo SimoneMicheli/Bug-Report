@@ -63,6 +63,10 @@ class pgDB{
 	public function close(){
 		pg_close($this->db);
 	}
+	
+	public function lastError(){
+	    return pg_last_error ($this->db);
+	}
 }
 
 class DBResults implements Iterator{

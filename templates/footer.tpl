@@ -7,7 +7,7 @@
       <h3>{$title}</h3>
         <ul class="borderedlist iconlist">
         {foreach from=$notes item="note"}
-            <li><a href="{$link}?id={$note->id}"" rel="facebox" "title="{substr($note->testo,0,150)}">{substr($note->testo,0,150)}... (<b>{$note->data2}</b>)</a></li>
+            <li><a href="{$link}?id={$note->id}" rel="facebox" "title="{substr($note->testo,0,150)}">{substr($note->testo,0,150)}... (<b>{$note->data2}</b>)</a></li>
         {/foreach}
         </ul>
     </div>

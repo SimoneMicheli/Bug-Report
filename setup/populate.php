@@ -74,20 +74,20 @@ INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('7','11','administr
 INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','11','administrator');
 INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('9','12','administrator');
 INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('14','8','administrator');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','9','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('7','10','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('6','11','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','12','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','12','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','12','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','1','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','7','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('3','4','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','6','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','8','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','1','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','2','developper');
-INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','3','developper');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','9','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('7','10','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('6','11','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','12','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','12','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','12','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('8','1','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','7','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('3','4','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('4','6','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('5','8','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','1','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('1','2','developer');
+INSERT INTO partecipante(id_utente,id_progetto,tipo) VALUES ('2','3','developer');
 
 
 INSERT INTO categoria(nome,id_progetto) VALUES ('Antenna','1');
@@ -119,15 +119,15 @@ INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
  VALUES ('Schermo piccolo','Lo schermo e da ingrandire','3','Schermo','1','3','3');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket4','Descrizione4','4','Altra categoria','5','1','1');
+ VALUES ('Friut-Ninja','Vedere nel progetto ipad','4','Altra categoria','5','1','1');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket5','Descrizione5','5','Altra categoria','10','4','5');
+ VALUES ('Colori','Bianco e nero non bastano, dobbiamo aggiungere altri colori','5','Altra categoria','10','4','5');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
  VALUES ('Ticket6','Descrizione6','4','Altra categoria','12','8','5');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket7','Descrizione7','3','Categoria','5','12','11');
+ VALUES ('Riproduzione musica','Non riproduce le canzoni di Vasco','3','Categoria','5','12','11');
 INSERT INTO ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato)
- VALUES ('Ticket8','Descrizione8','2','Categoria senza nome','10','4','6');
+ VALUES ('Fruit-Ninja','Alcuni giochi, come fruitninja, vanno a scatti!','2','Categoria senza nome','10','4','6');
 
 INSERT INTO file(estensione,id_ticket) VALUES ('png','1');
 INSERT INTO file(estensione,id_ticket) VALUES ('jpg','1');
@@ -144,23 +144,21 @@ INSERT INTO file(estensione,id_ticket) VALUES ('html','8');
 INSERT INTO file(estensione,id_ticket) VALUES ('php','8');
 INSERT INTO file(estensione,id_ticket) VALUES ('exe','8');
 
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo1','1','1');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('This project should be finished by December. We can not afford to delay much longer the construction of this new smartphone','1','1');
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo2','1','2');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo3','2','1');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Boys but we did not already a phone like that?','2','1');
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo4','2','3');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo5','2','5');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo5','2','4');
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo6','3','2');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo7','6','5');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo7','6','8');
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo8','6','6');
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo9','6','7');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo10','7','1');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('How boring this project. Unfortunately Steve will never cease to produce mobile phones and then we will be forced to go on with this damn stuff.','7','1');
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo11','8','3');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo12','9','5');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo13','10','1');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo14','10','8');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo15','11','4');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo16','12','9');
-INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo17','13','1');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo12','9','6');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo13','10','8');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo14','11','4');
+INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo15','12','9');
 
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo1','1','2');
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo2','1','3');
@@ -186,16 +184,16 @@ INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo4','2','
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo5','2','5');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo6','3','2');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo7','4','5');
-INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo8','6','1');
+INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Hi Steve, how are you? Im searching the project that we made together last year, where you put it?','6','1');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo9','6','6');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo10','7','2');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo11','8','3');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo12','9','5');
-INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo13','10','1');
+INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('You closed the gas? Mom','10','1');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo14','11','8');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo15','11','4');
 INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo16','13','9');
-INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Testo17','13','1');
+INSERT INTO notautente(testo,id_creatore,id_destinatario) VALUES ('Careful with that stuff, they will arrest us!','13','1');
 ");
 $db->close();
 header( "Location: ./trigger.php" );

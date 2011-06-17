@@ -26,8 +26,26 @@ if ($res->getNumRows() == 0)
 if ($res->first()->tipo == "administrator")
     $s->assign("administrator",true);
     
+$project_inf = $db->query("select * from progetto where id=".$project);
+$s->assign("project",$project_inf->first());
+
 $res = $db->query("select * from ticket where progetto=".$project);
 $s->assign("tickets",$res);
 
+$query="select to_date(data::text,'YYYY-MM-DD') as data2,id,testo from notaprogetto where id_progetto='".$project."' order by data desc";
+$notes = $db->query($query);
+$s->assign("notes",$notes);
+$s->assign("title","Project notes");
+$s->assign("link","./view_project_note.php");
+$s->assign("id",$project);
+
+
+//non va questa parte, non riesce a prendere la get error.
+if(isset($_GET['error']))
+    $s->assign("error","Error during note creation");
+if(isset($_GET['notice']))
+    $s->assign("notice","Note created");
+	
 $s->display("view_project.tpl");
+$s->display("footer.tpl");
 ?>

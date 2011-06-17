@@ -11,6 +11,9 @@ $(document).ready(function() {
 } );
 </script>
 <div class="article_wrapper">
+      {if $notice}
+      <span class="notice">{$notice}</span>
+      {/if}
       {if $error}
       <span class="error">{$error}</span>
       {/if}
@@ -37,5 +40,6 @@ $(document).ready(function() {
         {/foreach}
     </tbody>
 </table>
-<br /><br />
+<h2>Project description</h2>
+<div class="description">{$project->descrizione}</div>
 </div>

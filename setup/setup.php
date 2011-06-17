@@ -29,7 +29,7 @@ UNIQUE(id_proprietario,nome)
 CREATE TABLE public.partecipante (
 id_utente integer not null references utente(id),
 id_progetto integer not null references progetto(id),
-tipo varchar(20) not null default 'segnalatore' CHECK (tipo in ('administrator','developper','notifier')),
+tipo varchar(20) not null default 'notifier' CHECK (tipo in ('administrator','developer','notifier')),
 creatoil timestamp with time zone not null default current_timestamp,
 PRIMARY KEY (id_utente,id_progetto)
 );
@@ -48,13 +48,12 @@ descrizione text not null,
 datacreazione timestamp with time zone not null default current_timestamp,
 ultimamodifica timestamp with time zone not null default current_timestamp,
 priorita integer not null CHECK (priorita>0 AND priorita<6),
-status char(15) not null default 'new' CHECK (status in ('new','working','testing','resolved','invalid')),
-assegnato integer references utente(id),
+status char(15) not null default 'new' CHECK (status in ('new','working','testing','fixed','invalid')),
 datachiusura timestamp with time zone default null,
 categoria varchar(255) not null,
 progetto integer not null,
 id_creatore integer not null references utente(id),
-id_assegnato integer not null references utente(id),
+id_assegnato integer references utente(id),
 PRIMARY KEY (id),
 FOREIGN KEY(categoria,progetto) references categoria(nome,id_progetto),
 UNIQUE(titolo,categoria)

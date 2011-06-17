@@ -5,9 +5,9 @@ $db->connect();
 $db->transaction("
 CREATE OR REPLACE FUNCTION controllaticket() RETURNS trigger AS \$controllaticket\$
 begin
-if (new.assegnato is null AND new.status <> 'new')
+if (new.id_assegnato is null AND new.status <> 'new')
 then
-raise exception 'A new ticket must have an ID associated';
+raise exception 'Assigned to is null and status isn't new';
 end if;
 if (new.datachiusura is null AND new.status ='resolved')
 then
