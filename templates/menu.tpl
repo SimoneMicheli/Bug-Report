@@ -3,6 +3,7 @@
     <h3 class="leftbox">Menu</h3>
     <ul class="leftbox borderedlist">
 	<li><a href="./" >All Projects</a></li>
+	<li><a href="./me.php" >My tickets</a></li>
 	<li><a href="./new_project.php" rel="facebox">New Project</a></li>
 	
 	{if $project_page}
