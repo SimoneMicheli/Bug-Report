@@ -12,13 +12,16 @@ $db = new pgDB(true);
 $db->connect();
 
 $s->assign("userDisplayName",$user->getDisplayName());
-//get user project
-$projects = $db->query("select progetto.id as id, progetto.nome as nome, partecipante.tipo as tipo, to_date(progetto.creatoil::text,'YYYY-MM-DD') as creatoil, progetto.descrizione as descrizione, count(ticket.id) as num_ticket from 
-        partecipante join progetto
-        on partecipante.id_progetto = progetto.id join ticket
-        on ticket.progetto = progetto.id
-        where partecipante.id_utente = '".$user->getUserId()."'
-        group by progetto.id, progetto.nome, partecipante.tipo, progetto.creatoil, progetto.descrizione");
+
+$query ="select p.id as id, p.nome as nome,par.tipo as tipo,to_date(p.creatoil::text,'YYYY-MM-DD') as creatoil,p.descrizione as descrizione, count(t.id) as num_ticket
+         from progetto as p join partecipante par
+             on p.id = par.id_progetto
+                 left join ticket t
+                     on p.id = t.progetto
+         where par.id_utente=".$user->getUserId()."
+         group by p.id, p.nome, par.tipo ,p.creatoil,p.descrizione ";
+
+$projects = $db->query($query);
 
 $s->assign("projects",$projects);
 
