@@ -77,6 +77,7 @@
         </form>
     </div>
     <div id="ticket_update">
+		{if $administrator || $developer}
         <form method="POST" action="execute_ticket_update.php" id="update_status" style="width: 80%; margin: 20px 40px;">
             <h3>Status</h3>
             <ul>
@@ -146,5 +147,6 @@
             <input type="hidden" value="{$ticket->id}" name="ticket_id" />
             <input type="hidden" value="{$ticket->progetto}" name="project_id" />
         </form>
+		{/if}
     </div>
 </div>

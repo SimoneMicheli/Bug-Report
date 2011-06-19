@@ -15,7 +15,7 @@ $db->connect();
 $s->assign("userDisplayName",$user->getDisplayName());
 
 $ticket_id=$_GET['id'];
-$results = $db->query("select ticket.id as id, titolo,descrizione,datacreazione,ultimamodifica,priorita,status,datachiusura,categoria,progetto,email,id_assegnato from 
+$results = $db->query("select ticket.id as id, titolo,descrizione,datacreazione,ultimamodifica as ultimamodifica,priorita,status,datachiusura,categoria,progetto,email,id_assegnato from 
     ticket join utente on
         ticket.id_creatore = utente.id
     where ticket.id=".$ticket_id);
@@ -32,6 +32,12 @@ if ($results->first()->tipo == 'administrator'){
     $s->assign("ticket_page",true);
     $s->assign("ticket_id",$ticket_id);
 }
+if ($results->first()->tipo == 'developer'){
+    $s->assign("developer",true);
+}
+
+
+
 $s->assign("ticket",$ticket);
 
 $results = $db->query(" select notaticket.testo as testo, notaticket.data as data, utente.email as mail

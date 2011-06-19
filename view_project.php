@@ -40,7 +40,6 @@ $s->assign("link","./view_project_note.php");
 $s->assign("id",$project);
 
 
-//non va questa parte, non riesce a prendere la get error.
 if(isset($_GET['error']))
     $s->assign("error","Error during note creation");
 if(isset($_GET['notice']))

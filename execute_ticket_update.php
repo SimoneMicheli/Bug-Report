@@ -26,10 +26,18 @@ if($_POST['assigned_to'] == -1)
 else
     $assigned = $_POST['assigned_to'];
 
-$query = "update ticket set
-    status='".$_POST['status']."',
-    id_assegnato=".$assigned."
-    where id=".$_POST['ticket_id'];
+if($_POST['status']=="fixed" || $_POST['status']=="invalid"){
+	$date="now()";
+}else{
+	$date="null";
+}
+	
+$query = "update ticket
+set status='".$_POST['status']."',
+id_assegnato=".$assigned.",
+ultimamodifica=now(),
+datachiusura=".$date."
+where id=".$_POST['ticket_id'];
 
 $results = $db->query($query);
 if(!$results){

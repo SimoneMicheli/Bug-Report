@@ -13,7 +13,7 @@ if($_POST['titolo']!="" && $_POST['descrizione']!="" && $_POST['priorita']!="" &
 	}else{
 		$id_assegnato="'".$_POST['id_assegnato']."'";
 	}
-	echo $query = "insert into ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato) 
+	$query = "insert into ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato) 
 				VALUES ('".$_POST['titolo']."','".$_POST['descrizione']."','".$_POST['priorita']."','".$_POST['categoria']."','".$_POST['id']."','".$user->getUserId()."',".$id_assegnato.");";
 	$res = $db->query($query);
 }
