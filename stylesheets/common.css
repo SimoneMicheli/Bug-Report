@@ -129,6 +129,7 @@
 	/* center column */
 	 h2{color: #5699A7; font-size:2em;margin:10px 0;}
 	 h3{color: #49E695; font-size: 1.4em; margin: 5px 0;}
+	.article_wrapper{margin-bottom: 5px;}
 	.article_wrapper p{font-size:1.3em;padding: 0 0 10px 4px;}	
 	/* right column */
 	.rightbox_wrapper{

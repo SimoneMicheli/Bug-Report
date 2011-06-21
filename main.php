@@ -34,7 +34,7 @@ if(isset($_GET['delete']))
 $query="select to_date(data::text,'YYYY-MM-DD') as data2,id,testo from notautente where id_destinatario='".$user->getUserId()."' order by data desc limit 5 ";
 $notes = $db->query($query);
 $s->assign("notes",$notes);
-$s->assign("title","<a href='./view_user_notes.php'>Note to you</a>");
+$s->assign("title","Note to you");
 $s->assign("link","./view_user_note.php");
 
 $s->display("main.tpl");
