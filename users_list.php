@@ -5,13 +5,23 @@ $db = new pgDB();
 $db->connect();
 $user = new session();
 
+if(!$user->isLoggedIn()){
+    header( "Location: ./" );
+    return ;
+}
+$user_id = $user->getUserId();
+
+if($_SERVER['HTTP_X_REQUESTED_WITH'] != "XMLHttpRequest"){
+    echo "<h1>forbidden</h1>";
+    return ;
+}
+
 $tag= $_GET['tag'];
 $res = $db->query("select id,email from utente where email like '".$tag."%'");
 $users=Array();
 foreach ($res as $i => $user)
-    $users[$i]=array("key"=>$user->id,"value"=>$user->email);
-//    echo $i." ".$user->id."<br>";
-//print_r($users);
+    if($user->id != $user_id)
+        $users[$i]=array("key"=>$user->id,"value"=>$user->email);
 echo json_encode($users);
 
 ?>

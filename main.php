@@ -25,8 +25,10 @@ $projects = $db->query($query);
 
 $s->assign("projects",$projects);
 
-if(isset($_get['error']))
+if(isset($_GET['error']))
     $s->assign("error","Invalid email or password");
+if(isset($_GET['delete']))
+    $s->assign("error","Project deleted");
 
 
 $query="select to_date(data::text,'YYYY-MM-DD') as data2,id,testo from notautente where id_destinatario='".$user->getUserId()."' order by data desc limit 5 ";

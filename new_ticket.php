@@ -39,7 +39,6 @@ Print('
 					<option value="4">High</option>
 					<option value="5">Very High</option>
 					</select>
-					<br />
 					<label>Category</label>
 					<select name="categoria">
 ');
@@ -49,7 +48,6 @@ Print('
 					}
 Print('
 					</select>
-					<br />
 					<label>Assigned to</label>
 					<select name="id_assegnato">
 					<option selected value="-1">--unassigned--</option>
@@ -60,7 +58,6 @@ Print('
 					}
 Print('
 					</select>
-					<br />
 					<input type="hidden" name="id" value="'.$_GET['id'].'"/>
 					<input type="submit" value="Add Ticket" class="button" style="margin-top: 5px;"/>
 			</form>

@@ -17,6 +17,6 @@ if ($res->getNumRows() == 0)
 $query2 = "delete from progetto where id=".$_GET['id']."";
 $res2 = $db->query($query2);
 
-header( "Location: ./admin.php" );
+header( "Location: ./main.php?delete=1" );
 
 ?>

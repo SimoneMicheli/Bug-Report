@@ -74,7 +74,7 @@ if($_POST['type']=="update_info"){
 }
 
 if($_POST['type']=="add_user"){
-    $query = "insert into partecipante(id_utente,id_progetto,tipo) values ()".$_POST['user'].",".$_POST['project'].",".$_POST['type'].");";
+    $query = "insert into partecipante(id_utente,id_progetto,tipo) values (".$_POST['user'][0].",".$_POST['project'].",'".$_POST['role']."');";
     $db->query($query);
 
     $results = $db->query("select u.email as mail, u.id as id, p.tipo as tipo
@@ -83,7 +83,7 @@ if($_POST['type']=="add_user"){
     where p.id_progetto=".$_POST['project']);
     
     foreach ($results as $user){
-        if($user->getUserId() != $user->id){
+        if($user_id!= $user->id){
 ?>
         <table class="note">
                 <tr>
