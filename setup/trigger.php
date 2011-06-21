@@ -7,7 +7,7 @@ CREATE OR REPLACE FUNCTION controllaticket() RETURNS trigger AS \$controllaticke
 begin
 if (new.id_assegnato is null AND new.status <> 'new')
 then
-raise exception 'Assigned to is null and status isn't new';
+raise exception 'Assigned to is null and status is not new';
 end if;
 if (new.datachiusura is null AND new.status ='resolved')
 then
@@ -34,5 +34,5 @@ FOR EACH ROW EXECUTE PROCEDURE controllaticket();
 CREATE TRIGGER controllanotautente BEFORE INSERT OR UPDATE ON notautente
 FOR EACH ROW EXECUTE PROCEDURE controllanotautente();");
 $db->close();
-header( "Location: ../" );
+
 ?>

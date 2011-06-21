@@ -144,7 +144,7 @@ INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo12','9','6
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo13','10','8');
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo14','11','4');
 INSERT INTO notaprogetto(testo,id_creatore,id_progetto) VALUES ('Testo15','12','9');
-
+.php
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo1','1','2');
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo2','1','3');
 INSERT INTO notaticket(testo,id_creatore,id_ticket) VALUES ('Testo3','2','2');

@@ -39,12 +39,13 @@ if($_POST['name']!="" && $_POST['description']!=""){
 	foreach ($_POST['notifier'] as $notifier)
 	   $query=$query.",($notifier,$project_id,'notifier')";
 	foreach ($_POST['developer'] as $developer)
-    	$query=$query.",($developer,$project_id,'developper')";
+    	$query=$query.",($developer,$project_id,'developer')";
 	foreach ($_POST['administrator'] as $administrator)
 	    $query=$query.",($administrator,$project_id,'administrator')";
 	if($_POST['notes']!=null)
-	$query = $query." insert into notaprogetto (testo,id_creatore,id_progetto) values ('".$_POST['notes']."',".$user->getUserId().",".$project_id.");";
-	
+	    $query = $query." insert into notaprogetto (testo,id_creatore,id_progetto) values ('".$_POST['notes']."',".$user->getUserId().",".$project_id.");";
+	else
+	    $query =$query.";";
 	$res = $db->transaction($query);
 	header( "Location: ./main.php" );
 }else{

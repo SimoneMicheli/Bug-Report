@@ -2,7 +2,7 @@
 <div id="leftcolumn">
     <h3 class="leftbox">Menu</h3>
     <ul class="leftbox borderedlist">
-	<li><a href="./" >All Projects</a></li>
+	<li><a href="./" >My Projects</a></li>
 	<li><a href="./me.php" >My tickets</a></li>
 	<li><a href="./new_project.php" rel="facebox">New Project</a></li>
 	
@@ -13,11 +13,10 @@
 	
 	<li><a href="./new_user_note.php" rel="facebox">New User Note</a></li>
 	{if ($administrator && $project_page)}
-		<li><a href="./admin.php">Administration</a></li>
+		<li><a href="./admin.php?id={$id}">Administration</a></li>
 	{/if}
 	
 	{if ($administrator && $ticket_page )}
-	    <li><a href="./edit_ticket.php?id={$ticket_id}">Edit Ticket</a></li>
 	    <li><a href="./delete_ticket.php?id={$ticket_id}">Delete Ticket</a></li>
 	{/if}
 	<li><a href="./execute_logout.php">Logout</a></li>
