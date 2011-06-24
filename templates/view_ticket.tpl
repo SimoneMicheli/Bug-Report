@@ -30,7 +30,7 @@
 </script>
 
 <div class="article_wrapper">
-<h2>Ticket: {$ticket->titolo}</h2>
+<h2>Ticket: {$ticket->titolo} </h2> 
     <table id="ticket_description" cellpadding="0" cellspacing="0">
         <tr>
             <td width="50%">Id: {$ticket->id}</td>
@@ -135,7 +135,7 @@
             <h3>Assigned to</h3>
             <select name="assigned_to" style=" width: 100%; margin-bottom: 5px;">
                 <option value="-1"></option>
-                {foreach from=$users item="user"}
+                {foreach from=$no_notifier item="user"}
                     {if $user->id eq $ticket->id_assegnato}
                         <option value="{$user->id}" selected="selected">{$user->email}</option>
                     {else}

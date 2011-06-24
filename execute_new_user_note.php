@@ -9,7 +9,8 @@ if($_POST['email'][0]!="" && $_POST['notes']!=""){
 	$db->connect();
 
 	$destinatario=$_POST['email'][0];
-	$query = "insert into notautente(testo,id_creatore,id_destinatario) VALUES ('".$_POST['notes']."','".$user->getUserId()."','".$destinatario."');";
+	$notes = htmlspecialchars($_POST['notes'],ENT_QUOTES);
+	$query = "insert into notautente(testo,id_creatore,id_destinatario) VALUES ('".$notes."','".$user->getUserId()."','".$destinatario."');";
 	$res = $db->query($query);
 	echo ("{status: 'ok', msg: 'Mail sendt'}");
 

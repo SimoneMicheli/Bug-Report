@@ -32,7 +32,7 @@ $s->assign("categories",$results);
 $results = $db->query("select u.email as mail, u.id as id, p.tipo as tipo
     from partecipante as p join utente as u
         on p.id_utente = u.id
-    where p.id_progetto=".$project_id);
+    and p.id_progetto=".$project_id);
     
 $s->assign("users",$results);
 

@@ -88,5 +88,4 @@ PRIMARY KEY (id)
 );
 ");
 $db->close();
-//header( "Location: ./populate.php" );
 ?>

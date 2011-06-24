@@ -21,12 +21,16 @@ if($_POST['name']!="" && $_POST['description']!=""){
 	$res = $db->query($query);
 	$project_id=$res->first()->nextval;
 	//set project
-	$query = "insert into progetto(id,nome,descrizione,indirizzoweb,id_proprietario) VALUES	(".$project_id.", '".$_POST['name']."','".$_POST['description']."','".$_POST['webaddress']."',".$user->getUserId().");";
+	$name = htmlspecialchars($_POST['name'],ENT_QUOTES);
+	$description = htmlspecialchars($_POST['description'],ENT_QUOTES);
+	$webaddress = htmlspecialchars($_POST['webaddress'],ENT_QUOTES);
+	$query = "insert into progetto(id,nome,descrizione,indirizzoweb,id_proprietario) VALUES	(".$project_id.", '".$name."','".$description."','".$webaddress."',".$user->getUserId().");";
 	//parse category
 	$categories = explode(",",$_POST['category']);
 	$query = $query." insert into categoria (nome,id_progetto) values ";
 	foreach ($categories as $i=>$cat){
 	    $cat = trim($cat);
+	    $cat = htmlspecialchars($cat,ENT_QUOTES);
 	    if($i==0)
 	        $query=$query."('".$cat."',$project_id)";
 	    else
@@ -42,10 +46,12 @@ if($_POST['name']!="" && $_POST['description']!=""){
     	$query=$query.",($developer,$project_id,'developer')";
 	foreach ($_POST['administrator'] as $administrator)
 	    $query=$query.",($administrator,$project_id,'administrator')";
-	if($_POST['notes']!=null)
-	    $query = $query." insert into notaprogetto (testo,id_creatore,id_progetto) values ('".$_POST['notes']."',".$user->getUserId().",".$project_id.");";
-	else
+	if($_POST['notes']!=null){
+	    $notes = htmlspecialchars($_POST['notes'],ENT_QUOTES);
+	    $query = $query."; insert into notaprogetto (testo,id_creatore,id_progetto) values ('".$notes."',".$user->getUserId().",".$project_id.");";
+	}else{
 	    $query =$query.";";
+    }
 	$res = $db->transaction($query);
 	header( "Location: ./main.php" );
 }else{

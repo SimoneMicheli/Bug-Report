@@ -52,6 +52,13 @@ $results = $db->query("select utente.id as id, utente.email as email
     where partecipante.id_progetto=".$ticket->progetto);
 $s->assign("users",$results);
 
+$results = $db->query("select utente.id as id, utente.email as email
+    from partecipante join utente on
+        partecipante.id_utente = utente.id
+        and partecipante.tipo<>'notifier'
+    where partecipante.id_progetto=".$ticket->progetto);
+$s->assign("no_notifier",$results);
+
 $s->assign("user_id",$user->getUserId());
  //print_r($ticket);
 $s->display("view_ticket.tpl");

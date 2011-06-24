@@ -51,7 +51,8 @@ if($_POST['type']=="delete_category"){
 
 
 if($_POST['type']=="add_category"){
-     $query = "insert into categoria(nome,id_progetto) values ('".$_POST['category']."','".$_POST['project']."')";
+    $category = htmlspecialchars($_POST['category'],ENT_QUOTES);
+     $query = "insert into categoria(nome,id_progetto) values ('".$category."','".$_POST['project']."')";
     $db->query($query);
     
     $results = $db->query("select * from categoria where id_progetto=".$_POST['project']);
@@ -68,7 +69,10 @@ if($_POST['type']=="add_category"){
 }
 
 if($_POST['type']=="update_info"){
-     $query = "update progetto set nome='".$_POST['name']."', indirizzoweb='".$_POST['web']."', descrizione='".$_POST['description']."' where id='".$_POST['project']."'";
+    $name = htmlspecialchars($_POST['name'],ENT_QUOTES);
+    $description = htmlspecialchars($_POST['description'],ENT_QUOTES);
+    $web = htmlspecialchars($_POST['web'],ENT_QUOTES);
+     $query = "update progetto set nome='".$name."', indirizzoweb='".$web."', descrizione='".$description."' where id='".$_POST['project']."'";
     $db->query($query);
     header("Location:./admin.php?id=".$_POST['project']);
 }

@@ -13,8 +13,10 @@ if($_POST['titolo']!="" && $_POST['descrizione']!="" && $_POST['priorita']!="" &
 	}else{
 		$id_assegnato="'".$_POST['id_assegnato']."'";
 	}
+	$titolo = htmlspecialchars($_POST['titolo'],ENT_QUOTES);
+	$descrizione = htmlspecialchars($_POST['descrizione'],ENT_QUOTES);
 	$query = "insert into ticket(titolo,descrizione,priorita,categoria,progetto,id_creatore,id_assegnato) 
-				VALUES ('".$_POST['titolo']."','".$_POST['descrizione']."','".$_POST['priorita']."','".$_POST['categoria']."','".$_POST['id']."','".$user->getUserId()."',".$id_assegnato.");";
+				VALUES ('".$titolo."','".$descrizione."','".$_POST['priorita']."','".$_POST['categoria']."','".$_POST['id']."','".$user->getUserId()."',".$id_assegnato.");";
 	$res = $db->query($query);
 }
 header( "Location: ./view_project.php?id=".$_POST['id']."" );

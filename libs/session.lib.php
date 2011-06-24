@@ -17,6 +17,7 @@ class session{
     public function login($mail,$password){
         $db = new pgDB();
         $db->connect();
+        $password = htmlspecialchars($password,ENT_QUOTES);
         $user=$db->query("select * from utente where email='$mail' and password=md5('$password')");
         if($user->getNumRows() > 0){
             $user=$user->first();

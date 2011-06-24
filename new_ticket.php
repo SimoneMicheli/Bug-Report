@@ -52,7 +52,7 @@ Print('
 					<select name="id_assegnato">
 					<option selected value="-1">--unassigned--</option>
 ');
-					$res2 = $db->query("select utente.id as id, utente.email as email from partecipante inner join utente on partecipante.id_utente=utente.id where partecipante.id_progetto= '".$_GET['id']."'");
+					$res2 = $db->query("select utente.id as id, utente.email as email from partecipante inner join utente on partecipante.id_utente=utente.id where partecipante.tipo<>'notifier' and partecipante.id_progetto= '".$_GET['id']."'");
 					foreach($res2 as $utenti){
 						echo '<option value="'.$utenti->id.'">'.$utenti->email.'</option>';
 					}

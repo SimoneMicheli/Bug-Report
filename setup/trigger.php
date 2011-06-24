@@ -9,7 +9,7 @@ if (new.id_assegnato is null AND new.status <> 'new')
 then
 raise exception 'Assigned to is null and status is not new';
 end if;
-if (new.datachiusura is null AND new.status ='resolved')
+if (new.datachiusura is null AND new.status ='fixed')
 then
 raise exception 'A closed ticket must have a closed date';
 end if;

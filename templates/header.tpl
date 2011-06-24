@@ -23,17 +23,9 @@
     {if $userDisplayName}
     <span id="navigation">Bentornato: {$userDisplayName}</span>
     {/if}
-    <!-- top navigation -->
-    <!--<ul id="navigation">
-      <li class="active"><a href="http://www.free-css.com/" title="Home">Home</a></li>
-      <li><a href="http://www.free-css.com/" title="About">About</a></li>
-      <li><a href="http://www.free-css.com/" title="Services">Services</a></li>
-      <li><a href="http://www.free-css.com/" title="Portofolio">Portofolio</a></li>
-      <li><a href="http://www.free-css.com/" title="Contact">Contact</a></li>
-    </ul>-->
     <hr />
     <!-- banner message and building background -->
-    <div id="banner"> You would like professional degugging to work with you team? you have find it! this is BUGBOX </div>
+    <div id="banner">Professional light bug reporting</div>
     <hr />
   </div>
 </div>
